@@ -3,42 +3,171 @@
 <head>
 
 <style>
-div.h3text {
-  color: #ffcce0;
+
+div.topnav {
+  background-color: #8e1851;
+  overflow:hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-div.header {
-  color:#ff0066;
+
+div.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
-  font-size: 200%
+  padding-left: 50px ;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+div.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+div.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px){
+  div.topnav a:not(:first-child) {display: none;}
+  div.topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px){
+  div.topnav.responsive {
+    position: relative;
+    background-color: #8e1851;
+    overflow:hidden;
+    top: 0;
+    left: 0;
+  }
+  div.topnav.responsive .icon {
+    top: 0;
+  }
+  div.topnav.responsive a{
+    flex-direction: column;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding-left: 50px ;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+}
+
+div.h3atext {
+  color: #ffffff;
+  background-color: rgba(217, 140, 217, 0.3);
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 150%;
+}
+
+div.h3btext {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 150%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+div.header {
+  color:#ffffff;
+  text-align: center;
+  font-size: 200%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 table, th, td {
-  border: 10px #cc00cc;
+  border: 10px #ffffff;
 }
+table, th {
+  font-size: 100%;
+}
+table.center {
+  margin-left:auto;
+  margin-right: auto;
+}
+
+body {
+  background-image: url('https://wallpapersite.com/images/wallpapers/clouds-2560x1600-sunset-dark-hd-1894.jpg') ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 </style>
+
 
 <title>About Me: Animesha</title>
 
 </head>
 
-<body style="background-color:#330066">
-<img src="doge.jpg" alt="doge" width="100" height="100" style="float:left;">
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#Bio">Bio</a>
+  <a href="#Projects">Projects</a>
+  <a href="javascript:void(0);" class="icon" onclick="myMenu()">&#9776;</a>
+</div>
+
+<script>
+function myMenu(){
+  var x =
+  document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += "responsive";
+    } else {
+      x.className = "topnav"
+    }
+}
+</script>
+
+<img src="C:\Users\admin\Pictures\portfolio-profile.jpg" alt="doge" width="100" height="100" style="float:left;">
 <div class="header">
 <h1>About Me: Animesha</h1>
 </div>
-<hr>
 
-<div class="h3text">
-<h3>Bio:</h3>
+<a id="Bio">
+<div class="h3btext">
+<h2>Bio:</h2>
 <p>Hi! I'm Animesha and I'm a rising senior at Cupertino High School.
   Outside of school, I am a dancer, roboticist, tutor, and now, a girl who codes! Welcome to my website!</p>
 </div>
-<hr>
 
-<div class="h3text">
-<table>
+
+<div class="h3atext">
+<table class=center>
   <tr>
-    <th>Likes</th>
-    <th>Dislikes</th>
+    <text-decoration: underline;>
+    <th>Likes:</th>
+    <th>Dislikes:</th>
+    <text-decoration: underline;>
   </tr>
   <tr>
     <td>Avocados</td>
@@ -55,21 +184,29 @@ table, th, td {
 
 </table>
 </div>
-<hr>
 
-<div class="h3text">
-<h3>Fun Facts</h3>
-<p>
-<pre>
-  I was born in India.
-  I can undertand 8 languages.
-  I can flip my tongue over AND touch my nose with it. (Not at the same time LOL)
-  I have been dancing since I was 5.
-  My robotics team made it to world championships in 2017!
-</pre>
-</p>
+
+<div class="h3btext">
+<h2>Fun Facts:</h2>
+<h3>I was born in India.</h3>
+<h3>I can undertand 8 languages.</h3>
+<h3>I can flip my tongue over AND touch my nose with it. (Not at the same time LOL)</h3>
+<h3>I have been dancing since I was 5.</h3>
+<h3>My robotics team made it to world championships in 2017!</h3>
 </div>
-<hr>
+</a>
+
+<a id="Projects">
+<div class="h3atext">
+  <h2>Scratch: Angry Birds Escape</h2>
+  <img src="C:\Users\admin\Pictures\angrybirds.jpg" alt="Angry Birds Escape" width="719" height="473" style="float-center;">
+  <p>
+    Here is the scratch game I made with Rhee. This is a combination of angry birds (shooting) and panda pop. The goal of the game is to "rescue" as many birds as possible.
+    If the bird shot is the same type of bird as the bird hit, the bird hit can fly away. This was accomplished by hiding the hit bird if the costume of the shot bird is the same as the costume of the hit bird.
+  </p>
+</div>
+</a>
+
 
 </body>
 </html>
